@@ -1,23 +1,37 @@
 .thesis .table-container {
-    height: 21px;
-    width: 21px; 
-    /* max-width: 700px; 
+    /* height: 21px;
+    width: 21px;  */
+    max-width: 700px; 
     margin: 0 auto;
-    overflow: visible; */
+    overflow: visible;
 }
 
 .thesis .box {
     padding-top: 40px;
     cursor: pointer;
     border-bottom: 1px solid #e0e0e0;
+    /* max-height: 700px;
+    overflow: scroll; */
+    /* max-height: 50px;  
+    overflow: hidden; */
+    /* width: 100%; */
     /* overflow-y: auto; */
 }
 
+/* .thesis .box.expanded {
+    max-height: 300px; 
+    /* overflow-y: auto; 
+    background-color: #ffffff;  *\/
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+} */
+
 .thesis .box.expanded .details {
-    /* max-height: 200px; 
-    overflow-y: auto;  */
-    max-height: 150px; /* Set a maximum height for scrollable content */
-    overflow-y: auto; /* Scrollable content */
+    max-height: 150px; 
+    width: 100%;
+    /* overflow-y: auto; Scrollable content */
     margin-top: 10px;
     padding: 10px;
     background-color: #f7f7f7;

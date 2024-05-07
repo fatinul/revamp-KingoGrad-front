@@ -23,11 +23,31 @@ function Thesis() {
         '4-15 ~ 4-19: Third Assignment of professor'
       ]
     },
-    { text: 'Proposal Submission', label: '7th', dotColor: '#bbb', rectangleColor: '#696969' },
-    { text: 'Mid Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969' },
-    { text: 'Final Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969' },
-    { text: 'Evaluation of Professor', label: '8th', dotColor: '#bbb', rectangleColor: '#696969' },
-    { text: 'Final Presentation', label: '8th', dotColor: '#bbb', rectangleColor: '#696969' },
+    { text: 'Proposal Submission', label: '7th', dotColor: '#bbb', rectangleColor: '#696969',
+      details: [
+
+      ]
+    },
+    { text: 'Mid Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
+      details: [
+
+      ]
+    },
+    { text: 'Final Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
+      details: [
+
+      ]
+    },
+    { text: 'Evaluation of Professor', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
+      details: [
+
+      ]
+    },
+    { text: 'Final Presentation', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
+      details: [
+
+      ]
+    },
   ];
 
   return (
@@ -55,12 +75,15 @@ function Thesis() {
               </div>
             </div>
             {expandedSection === index && (
-              <div className='details'>
-                <ul>
-                  {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
-                </ul>
-                {/* Detailed content for {item.text} */}
-              </div>
+              // <div className='table-container'>
+                <div className='details'>
+                  <ul>
+                    {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
+                  </ul>
+                  {/* Detailed content for {item.text} */}
+                </div>
+              // </div>
+              
             )}
           </div>
         ))}
