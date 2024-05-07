@@ -10,7 +10,7 @@ import InternshipDetails from './InternshipDetails.jsx'
 import ThousandLine from './ThousandLine.jsx'
 import Thesis from './Thesis.jsx'
 import Completion from './Completion.jsx'
-import RoadMap from './Roadmap.jsx'
+import Roadmap from './Roadmap.jsx'
 import './App.css'
 
 function App() {
@@ -98,7 +98,7 @@ function App() {
               </div>
             </div>
             <div className='grid-container'>
-              <div className={`grid-item ${expandedRoadmap ? 'expanded-roadmap' : ''}`} id='roadmap' onClick={toggleExpandedRoadmap}>
+              <div className={`grid-item ${expandedRoadmap ? 'expanded-roadmap' : 'roadmap'}`} onClick={toggleExpandedRoadmap}>
                 {expandedRoadmap ? null : <img id='compass' src={compass} alt="" />}
                 {expandedRoadmap &&
                 <>
@@ -110,7 +110,9 @@ function App() {
                     <p>Liberal-Arts</p>
                     <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeRoadmap}/>
                   </div>
-                  <RoadMap />
+                  <div className='roadmap-content'>
+                    <Roadmap />
+                  </div>
                 </>
                 }
               </div>
@@ -128,7 +130,10 @@ function App() {
                       <p className='card-title'>Completion</p>
                       <p id='completion-percent'>67.5%</p>
                     </div>
-                    <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeCompletion}/>
+                    <div id='right'>
+                      <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeCompletion}/>
+                      <p id='completion-counter'><span id='completed-credit'>69</span>:<span id='left-credit'>46</span></p>
+                    </div>
                   </div>
                   <hr />
                   <Completion />

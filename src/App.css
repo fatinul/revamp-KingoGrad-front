@@ -141,7 +141,7 @@ hr{
   }
 }
 
-#roadmap{
+.roadmap{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -152,14 +152,25 @@ hr{
 
 .expanded-roadmap{
   grid-column: span 5;
-  grid-row:  span 3;
+  grid-row:  span 4;
+  cursor: default;
 
+  &:hover{
+    animation: none;
+  }
+  
   #compass{
     width: 70px;
   }
 }
 
+.roadmap-content{
+  display: flex;
+  justify-content: center;
+}
+
 .minimize{
+  cursor: pointer;
   width: 70px;
 }
 
@@ -183,11 +194,11 @@ hr{
 .roadmap-header{
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  margin-top: 28px;
   padding-left: 28px;
   padding-right: 28px;
   align-items: center;
-  border: 1px solid red;
+  font-size: 24px;
 }
 
 .completion{
@@ -215,6 +226,11 @@ hr{
 .expanded-completion{
   grid-column: span 4;
   grid-row:  span 3;
+  cursor: default;
+
+  &:hover{
+    animation: none;
+  }
 
   .completion-header{
     display: flex;
@@ -222,6 +238,31 @@ hr{
     align-items: center;
     padding-right: 28px;
     padding-left: 28px;
+  }
+
+  #right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+  }
+
+  #completion-counter{
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  #completed-credit{
+    color: #587B7F;
+    padding-right: 5px;
+  }
+
+  #left-credit{
+    color: #EE4B6A;
+    padding-left: 5px;
+    padding-right: 10px;
   }
 }
 
@@ -248,6 +289,11 @@ hr{
 .expanded-thousandLine{
   grid-column: span 4;
   grid-row:  span 3;
+  cursor: default;
+
+  &:hover{
+    animation: none;
+  }
 
   .thousandLine-header{
     display: flex;
@@ -295,6 +341,11 @@ hr{
 .expanded-internship{
   grid-column: span 5;
   grid-row:  span 3;
+  cursor: default;
+
+  &:hover{
+    animation: none;
+  }
 
   .expanded-internship-header{
     display: flex;
@@ -344,6 +395,11 @@ hr{
 .expanded-thesis{
   grid-column: span 4;
   grid-row:  span 3;
+  cursor: default;
+
+  &:hover{
+    animation: none;
+  }
 
   .thesis-header{
     display: flex;
