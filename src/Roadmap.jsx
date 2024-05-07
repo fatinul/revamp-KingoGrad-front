@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react'
 import ReactFlow, { Controls, Background, MiniMap, applyNodeChanges, applyEdgeChanges } from 'reactflow';
 import 'reactflow/dist/style.css';
-
 import nodes from './roadmaps/software/major/nodes.js'
 import edges from './roadmaps/software/major/edges.js'
 
