@@ -4,9 +4,9 @@ function InternshipDetails() {
 
 
   return (
-    <>
-
-    </>
+    <div className='internshipDetails'>
+        heloo
+    </div>
   )
 }
 

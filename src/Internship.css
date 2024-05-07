@@ -1,0 +1,83 @@
+.internship .table-container {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid yellow; */
+}
+
+.internship .table {
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px; /* Use fixed font size instead of viewport units */
+}
+
+.internship .table table {
+    border-collapse: collapse;
+}
+
+.internship .table th {
+    text-align: center;
+    font-weight: 700;
+    padding-left: 10px; 
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width: 150px; 
+    
+}
+
+.internship .table td {
+    /* padding: 0 4vw; */
+    text-align: center;
+    font-weight: 200;
+    padding-bottom: 30px;
+    width: 150px; 
+    
+}
+
+.internship .label1,
+.internship .label2,
+.internship .label3,
+.internship .label4,
+.internship .label5 {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px; /* Adjust border radius as needed */
+}
+
+.internship .label1 {
+    background-color: #d9d9d9;
+    color: #8b8a8a;
+}
+
+.internship .label2 {
+    background-color: #FFA500;
+}
+
+.internship .label3 {
+    background-color: #d9d9d9;
+    color: #8b8a8a;
+}
+
+.internship .label4 {
+    background-color: #FF4433;
+}
+
+.internship .label5 {
+    background-color: #40E0D0;
+}
+
+.internship .link1,
+.internship .link2,
+.internship .link3,
+.internship .link4,
+.internship .link5{
+    /* border-radius: 1vw;
+    padding: 3px;
+    padding-left: 2vw;
+    padding-right: 2vw; */
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px; 
+    background-color: #40E0D0;
+}
+

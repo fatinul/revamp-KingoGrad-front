@@ -175,7 +175,7 @@ function App() {
                 {expandedInternship &&
                 <>
                   <div className='expanded-internship-header'>
-                    <p id='internship-title'>Internship Requirement Checker</p>
+                    <p id='internship-title'>Internship Requirement</p>
                     <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeInternship}/>
                   </div>
                   <hr />
