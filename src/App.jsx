@@ -155,7 +155,7 @@ function App() {
                 <>
                   <div className='thousandLine-header'>
                     <div>
-                      <p className='card-title'>1000 Line Project</p>
+                      <p className='card-title'>10000 Line Project</p>
                       <p id='thousandLine-status'>Incomplete</p>
                     </div>
                     <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeThousandLine}/>

@@ -1,0 +1,106 @@
+.thesis .table-container {
+    height: 21px;
+    width: 21px; 
+    /* max-width: 700px; 
+    margin: 0 auto;
+    overflow: visible; */
+}
+
+.thesis .box {
+    padding-top: 40px;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+    /* overflow-y: auto; */
+}
+
+.thesis .box.expanded .details {
+    /* max-height: 200px; 
+    overflow-y: auto;  */
+    max-height: 150px; /* Set a maximum height for scrollable content */
+    overflow-y: auto; /* Scrollable content */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.thesis .dot {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    /* background-color: #bbb; */
+    border-radius: 50%;
+    margin-left: -350px;
+}
+
+.thesis .overlap {
+    height: 38px;
+    margin-left: 50px;
+    position: absolute;
+    width: 57px;
+}
+
+.thesis .rectangle {
+    /* background-color: #696969; */
+    border-radius: 7px;
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 57px;
+}
+
+.thesis .text {
+    color: #d9d9d9;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 24px;
+    font-weight: 600;
+    height: 37px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    margin-top: 5px;
+    width: 57px;
+}
+
+.thesis .sequence {
+    color: #696969;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 120px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.thesis .arrow {
+    position: absolute;
+    right: -700px;
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid #696969;;
+    border-right: 2px solid #696969;
+    transform: rotate(45deg);
+}
+
+.thesis .box.expanded .arrow {
+    transform: rotate(135deg);
+}
+
+.thesis .details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.thesis .details li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #696969;
+}

@@ -1,0 +1,52 @@
+.thousandLine .table-container {
+    height: 21px;
+    width: 21px;    
+    /* display: flex;
+    justify-content: center; */
+}
+
+.thousandLine .box {
+    padding-top: 50px;
+    padding-left: 80px; 
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.thousandLine .dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.thousandLine .dot-passed {
+    height: 25px;
+    width: 25px;
+    background-color: #637e81;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.thousandLine .dot-failed {
+    height: 25px;
+    width: 25px;
+    background-color: #ee4b6a;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.thousandLine .course {
+    color: #696969;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    margin-left: 60px;
+    margin-top: -5px;
+    white-space: nowrap;
+    display: inline-block;
+    align-items: center;
+}
