@@ -19,6 +19,7 @@ function App() {
   const [expandedInternship, setExpandedInternship] = useState(false)
   const [expandedThesis, setExpandedThesis] = useState(false)
   const [expandedThousandLine, setExpandedThousandLine] = useState(false)
+  
 
   const toggleExpandedRoadmap = () => {
     setExpandedRoadmap(true)

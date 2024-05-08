@@ -6,7 +6,8 @@
 
 .internship .table {
     font-family: "Inter-Regular", Helvetica;
-    font-size: 20px; /* Use fixed font size instead of viewport units */
+    font-size: 20px;
+    padding-top: 20px;
 }
 
 .internship .table table {
@@ -32,6 +33,10 @@
     
 }
 
+.internship .table td:nth-child(4) {
+    font-weight: bold;
+  }
+
 .internship .label1,
 .internship .label2,
 .internship .label3,
@@ -41,43 +46,55 @@
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-radius: 20px; /* Adjust border radius as needed */
+    border-radius: 20px;
 }
 
 .internship .label1 {
     background-color: #d9d9d9;
-    color: #8b8a8a;
+    color: #727171;
 }
 
 .internship .label2 {
     background-color: #FFA500;
+    color: #f0eded;
 }
 
 .internship .label3 {
     background-color: #d9d9d9;
-    color: #8b8a8a;
+    color: #727171;
 }
 
 .internship .label4 {
     background-color: #FF4433;
+    color: #f0eded;
 }
 
 .internship .label5 {
     background-color: #40E0D0;
+    color: #fdf8f8;
 }
 
+.internship .click1{
+    font-size: large;
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: rgb(170, 103, 233);
+}
 .internship .link1,
 .internship .link2,
 .internship .link3,
 .internship .link4,
 .internship .link5{
-    /* border-radius: 1vw;
-    padding: 3px;
-    padding-left: 2vw;
-    padding-right: 2vw; */
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border-radius: 10px;
-    padding: 5px;
     width: 100px; 
     background-color: #40E0D0;
+    color: #f8f7fc;
+    cursor: pointer;
 }
 

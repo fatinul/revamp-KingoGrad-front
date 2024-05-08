@@ -1,0 +1,56 @@
+.internship-details .title{
+    display: flex;
+    align-items: center;
+}
+.internship-details .back-button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.internship-details .back-button-icon{
+    padding-top: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.internship-details .internship-details .details{
+    padding-top: -3vh;
+}
+
+.internship-details .trait1,
+.internship-details .trait2,
+.internship-details .trait3{
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.internship-details .trait1{
+    background-color: #FFA500;
+    color: #ffff;
+}
+
+.internship-details .trait2{
+    background-color: #FF4433;
+    color: #ffff;
+}
+
+.internship-details .trait3{
+    background-color: #40E0D0;
+    color: #ffff;
+}
+
+.internship-details .trait1-details,
+.internship-details .trait2-details,
+.internship-details .trait3-details{
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+}
