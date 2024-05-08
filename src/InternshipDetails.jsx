@@ -1,13 +1,7 @@
 import './InternshipDetails.css';
 import backButton from './assets/back-button.png'
-// import { useHistory } from 'react-router-dom';
 
 function InternshipDetails({ onBackClick }) {
-  // const history = useHistory(); // Create history object
-
-  // const handleBackClick = () => {
-  //   history.goBack(); // Go back to the previous page
-  // };
 
   return (
     <div className='internship-details'>

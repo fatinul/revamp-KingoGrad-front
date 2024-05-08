@@ -1,3 +1,7 @@
+.internship-details{
+    display: row;
+}
+
 .internship-details .title{
     display: flex;
     align-items: center;

@@ -1,7 +1,6 @@
 .internship .table-container {
     display: flex;
     justify-content: center;
-    /* border: 1px solid yellow; */
 }
 
 .internship .table {
@@ -25,7 +24,6 @@
 }
 
 .internship .table td {
-    /* padding: 0 4vw; */
     text-align: center;
     font-weight: 200;
     padding-bottom: 30px;
