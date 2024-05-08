@@ -31,34 +31,35 @@ function Thesis() {
 
   return (
     <div className="thesis">
-      <div className="list-container">
-        {data.map((item, index) => (
-          <div key={index} className={`item ${expandedSection === index ? 'expanded' : ''}`}>
-            <div className="header" onClick={() => toggleSection(index)}>
-            {/* <div
-              className='dot'
-              onClick={() => toggleSection(index)}
-              style={{ backgroundColor: item.dotColor }}
-            > */}
-              <div className="dot" style={{ backgroundColor: item.dotColor }}></div>
-              <div className='overlap'>
-                <div className='rectangle' style={{ backgroundColor: item.rectangleColor }}></div>
-                <span className="label">{item.label}</span>
-              </div>
-              
-              <span className="text">{item.text}</span>
-              <span className={`arrow ${expandedSection === index ? 'up' : 'down'}`}></span>
-            {/* </div> */}
-            </div>
-            {expandedSection === index && (
-              <div className="details">
-                <ul>
-                  {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
-                </ul>
-              </div>
-            )}
-          </div>
-        ))}
+      <div className="table-container">
+        <table>
+          <tbody>
+            {data.map((item, index) => (
+              <React.Fragment key={index}>
+                <tr className={`header ${expandedSection === index ? 'expanded' : ''}`} onClick={() => toggleSection(index)}>
+                  <td>
+                    <div className="dot" style={{ backgroundColor: item.dotColor }}></div>
+                  </td>
+                  <td>
+                    <div className="label">{item.label} {item.text}</div>
+                  </td>
+                  <td>
+                    <span className={`arrow ${expandedSection === index ? 'up' : 'down'}`}></span>
+                  </td>
+                </tr>
+                {expandedSection === index && (
+                  <tr className="details">
+                    <td colSpan="3">
+                      <ul>
+                        {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
+                      </ul>
+                    </td>
+                  </tr>
+                )}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
