@@ -5,16 +5,15 @@ function Thesis() {
   const [expandedSection, setExpandedSection] = useState(null);
 
   const toggleSection = (index) => {
-    if (expandedSection === index) {
-      setExpandedSection(null);
-    } else {
-      setExpandedSection(index);
-    }
+    setExpandedSection(expandedSection === index ? null : index);
   };
 
-  // Updated data array with text, label, and color information
   const data = [
-    { text: 'Advisor Application', label: '6th', dotColor: '#637e81', rectangleColor: '#637e81',
+    {
+      label: '6th',
+      text: 'Advisor Application',
+      dotColor: '#637e81',
+      rectangleColor: '#637e81',
       details: [
         '3-18 ~ 3-22: First Application for professor',
         '3-25 ~ 3-29: First choose student',
@@ -23,67 +22,40 @@ function Thesis() {
         '4-15 ~ 4-19: Third Assignment of professor'
       ]
     },
-    { text: 'Proposal Submission', label: '7th', dotColor: '#bbb', rectangleColor: '#696969',
-      details: [
-
-      ]
-    },
-    { text: 'Mid Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
-      details: [
-
-      ]
-    },
-    { text: 'Final Report Submission', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
-      details: [
-
-      ]
-    },
-    { text: 'Evaluation of Professor', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
-      details: [
-
-      ]
-    },
-    { text: 'Final Presentation', label: '8th', dotColor: '#bbb', rectangleColor: '#696969',
-      details: [
-
-      ]
-    },
+    { label: '7th', text: 'Proposal Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
+    { label: '8th', text: 'Mid Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
+    { label: '8th', text: 'Final Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
+    { label: '8th', text: 'Evaluation of Professor', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
+    { label: '8th', text: 'Final Presentation', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
   ];
 
   return (
-    <div className='thesis'>
-      <div className='table-container'>
+    <div className="thesis">
+      <div className="list-container">
         {data.map((item, index) => (
-          <div key={index} className={`box ${expandedSection === index ? 'expanded' : ''}`}>
-            <div
+          <div key={index} className={`item ${expandedSection === index ? 'expanded' : ''}`}>
+            <div className="header" onClick={() => toggleSection(index)}>
+            {/* <div
               className='dot'
               onClick={() => toggleSection(index)}
               style={{ backgroundColor: item.dotColor }}
-            >
+            > */}
+              <div className="dot" style={{ backgroundColor: item.dotColor }}></div>
               <div className='overlap'>
-                <div
-                  className='rectangle'
-                  style={{ backgroundColor: item.rectangleColor }}
-                ></div>
-                <div className='text'>{item.label}</div>
+                <div className='rectangle' style={{ backgroundColor: item.rectangleColor }}></div>
+                <span className="label">{item.label}</span>
               </div>
-              <div className='sequence'>
-                {item.text}
-                <span
-                  className={`arrow ${expandedSection === index ? 'expanded' : ''}`}
-                ></span>
-              </div>
+              
+              <span className="text">{item.text}</span>
+              <span className={`arrow ${expandedSection === index ? 'up' : 'down'}`}></span>
+            {/* </div> */}
             </div>
             {expandedSection === index && (
-              // <div className='table-container'>
-                <div className='details'>
-                  <ul>
-                    {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
-                  </ul>
-                  {/* Detailed content for {item.text} */}
-                </div>
-              // </div>
-              
+              <div className="details">
+                <ul>
+                  {item.details.map((detail, idx) => <li key={idx}>{detail}</li>)}
+                </ul>
+              </div>
             )}
           </div>
         ))}

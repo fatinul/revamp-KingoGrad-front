@@ -4,13 +4,14 @@ import photo from './assets/sample-photo.jpg'
 import compass from './assets/compass.png'
 import gradcap from './assets/gradcap.png'
 import minimize from './assets/minimize.png'
-
 import Internship from './Internship.jsx'
-import InternshipDetails from './InternshipDetails.jsx'
 import ThousandLine from './ThousandLine.jsx'
 import Thesis from './Thesis.jsx'
 import Completion from './Completion.jsx'
-import Roadmap from './Roadmap.jsx'
+import RoadmapMajor from './roadmaps/software/major/Roadmap.jsx'
+import RoadmapCore from './roadmaps/software/major-core/Roadmap.jsx'
+import RoadmapExp from './roadmaps/software/exp/Roadmap.jsx'
+import RoadmapDS from './roadmaps/software/ds/Roadmap.jsx'
 import './App.css'
 
 function App() {
@@ -19,7 +20,11 @@ function App() {
   const [expandedInternship, setExpandedInternship] = useState(false)
   const [expandedThesis, setExpandedThesis] = useState(false)
   const [expandedThousandLine, setExpandedThousandLine] = useState(false)
-  
+  const [activeTab, setActiveTab] = useState('major')
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab)
+  }
 
   const toggleExpandedRoadmap = () => {
     setExpandedRoadmap(true)
@@ -105,14 +110,25 @@ function App() {
                 <>
                   <div className='roadmap-header'>
                     <img id='compass' src={compass} alt="" />
-                    <p>Major</p>
-                    <p>Core</p>
-                    <p>Exp</p>
-                    <p>Liberal-Arts</p>
+                    <div className={`roadmap-tab ${activeTab === 'major' ? 'active' : ''}`} onClick={() => handleTabClick('major')}>
+                      Major
+                    </div>
+                    <div className={`roadmap-tab ${activeTab === 'major-core' ? 'active' : ''}`} onClick={() => handleTabClick('major-core')}>
+                      Core
+                    </div>
+                    <div className={`roadmap-tab ${activeTab === 'exp' ? 'active' : ''}`} onClick={() => handleTabClick('exp')}>
+                      Exp
+                    </div>
+                    <div className={`roadmap-tab ${activeTab === 'ds' ? 'active' : ''}`} onClick={() => handleTabClick('ds')}>
+                      DS
+                    </div>
                     <img className='minimize' src={minimize} alt="" onClick={toggleMinimizeRoadmap}/>
                   </div>
                   <div className='roadmap-content'>
-                    <Roadmap />
+                    {activeTab === 'major' && <RoadmapMajor />}
+                    {activeTab === 'major-core' && <RoadmapCore />}
+                    {activeTab === 'exp' && <RoadmapExp />}
+                    {activeTab === 'ds' && <RoadmapDS />}
                   </div>
                 </>
                 }

@@ -1,64 +1,58 @@
-.thesis .table-container {
-    /* height: 21px;
-    width: 21px;  */
-    max-width: 700px; 
-    margin: 0 auto;
-    overflow: visible;
+.thesis {
+    max-width: 700px;
+    /* height: 151px; */
+    margin: auto;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    border-radius: 5px;
 }
 
-.thesis .box {
-    padding-top: 40px;
+.thesis .header {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.thesis .list-container {
+    border-top: 1px solid #eee;
+}
+
+.thesis .item {
+    border-bottom: 1px solid #eee;
+}
+
+.thesis .item .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     cursor: pointer;
-    border-bottom: 1px solid #e0e0e0;
-    /* max-height: 700px;
-    overflow: scroll; */
-    /* max-height: 50px;  
-    overflow: hidden; */
-    /* width: 100%; */
-    /* overflow-y: auto; */
-}
-
-/* .thesis .box.expanded {
-    max-height: 300px; 
-    /* overflow-y: auto; 
-    background-color: #ffffff;  *\/
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-} */
-
-.thesis .box.expanded .details {
-    max-height: 150px; 
-    width: 100%;
-    /* overflow-y: auto; Scrollable content */
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
 .thesis .dot {
     display: flex;
     align-items: center;
-    position: relative;
+    position: absolute;
+    left: 550px;
     height: 25px;
     width: 25px;
-    /* background-color: #bbb; */
     border-radius: 50%;
-    margin-left: -350px;
 }
 
 .thesis .overlap {
     height: 38px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     position: absolute;
     width: 57px;
+    left: 600px;
 }
 
 .thesis .rectangle {
-    /* background-color: #696969; */
+    background-color: #696969; /* Default color */
     border-radius: 7px;
     height: 37px;
     left: 0;
@@ -67,54 +61,51 @@
     width: 57px;
 }
 
-.thesis .text {
-    color: #d9d9d9;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-size: 24px;
-    font-weight: 600;
-    height: 37px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
+.thesis .item .label {
     position: absolute;
-    text-align: center;
-    margin-top: 5px;
-    width: 57px;
+    left: 10px;
+    font-weight: bold;
+    color: #555;
 }
 
-.thesis .sequence {
-    color: #696969;
-    font-family: "Inter-Regular", Helvetica;
-    font-size: 25px;
-    font-weight: 400;
-    margin-left: 120px;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
+.thesis .item .text {
+    flex: 1;
+    margin: 0 10px;
 }
 
 .thesis .arrow {
     position: absolute;
-    right: -700px;
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid #696969;;
-    border-right: 2px solid #696969;
+    right: 300px;
+    border: solid #555;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
     transform: rotate(45deg);
+    transition: transform 0.2s;
 }
 
-.thesis .box.expanded .arrow {
-    transform: rotate(135deg);
+.thesis .arrow.up {
+    transform: rotate(-135deg);
 }
 
-.thesis .details ul {
+.thesis .item.expanded .details {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.thesis .item .details ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.thesis .details li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #696969;
+.thesis .item .details li {
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+}
+
+.thesis .item .details li:first-child {
+    border-top: none;
 }

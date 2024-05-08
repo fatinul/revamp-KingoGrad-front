@@ -162,6 +162,15 @@ hr{
   #compass{
     width: 70px;
   }
+
+  .roadmap-tab{
+    color: #242424;
+    cursor: pointer;
+  }
+
+  .active{
+    font-weight: 700;
+  }
 }
 
 .roadmap-content{

@@ -15,19 +15,29 @@ function ThousandLine() {
       <div className='table-container'>
         <div className='box'>
           <div className='dot-passed'>
-            <div className='course'>Computer Architecture</div>
+            <div className='course'>Computer Architecture
+              <div className='courseResult'>A</div>
+            </div>
           </div>
           <div className='dot-failed'>
-            <div className='course'>Operating Systems</div>
+            <div className='course'>Operating Systems
+              <div className='courseResult'>C</div>
+            </div>
           </div>
           <div className='dot'>
-            <div className='course'>Database</div>
+            <div className='course'>Database
+              {/* <div className='courseResult'>A</div> */}
+            </div>
           </div>
           <div className='dot'>
-            <div className='course'>Computer Network</div>
+            <div className='course'>Computer Network
+              {/* <div className='courseResult'>A</div> */}
+            </div>
           </div>
           <div className='dot'>
-            <div className='course'>Programming Languages</div>
+            <div className='course'>Programming Languages
+              {/* <div className='courseResult'>A</div> */}
+            </div>
           </div>
         </div>        
       </div>

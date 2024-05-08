@@ -50,3 +50,14 @@
     display: inline-block;
     align-items: center;
 }
+
+.thousandLine .courseResult {
+    color: #696969;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 25px;
+    font-weight: 400;
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    right: 300px;
+}
