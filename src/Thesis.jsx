@@ -22,11 +22,32 @@ function Thesis() {
         '4-15 ~ 4-19: Third Assignment of professor'
       ]
     },
-    { label: '7th', text: 'Proposal Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
-    { label: '8th', text: 'Mid Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
-    { label: '8th', text: 'Final Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
-    { label: '8th', text: 'Evaluation of Professor', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
-    { label: '8th', text: 'Final Presentation', dotColor: '#bbb', rectangleColor: '#bbb', details: [] },
+    { label: '7th', text: 'Proposal Submission', dotColor: '#bbb', rectangleColor: '#bbb', 
+      details: [
+        '3-4 ~ 3-8: Additional application professor',
+        '3-11 ~ 3-22: Submit proposal',
+        '3-25 ~ 3-29: Approve for proposal'
+      ] },
+    { label: '8th', text: 'Mid Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', 
+      details: [
+        '3-11 ~ 3-22: Submit mid report',
+        '3-25 ~ 3-29: Approve for mid report'
+      ] },
+    { label: '8th', text: 'Final Report Submission', dotColor: '#bbb', rectangleColor: '#bbb', 
+      details: [
+        '4-15 ~ 4-26: Submit Final report',
+        '4-29 ~ 5-3: Approve for Final report'
+      ] },
+    { label: '8th', text: 'Evaluation of Professor', dotColor: '#bbb', rectangleColor: '#bbb', 
+      details: [
+        '5-8 ~ 5-14: Evaluation of professor',
+        '5-22: Presentation of campus'
+      ] },
+    { label: '8th', text: 'Final Presentation', dotColor: '#bbb', rectangleColor: '#bbb', 
+      details: [
+        '5-8 ~ 5-14: Evaluation of professor',
+        '5-22: Presentation of campus'
+      ] },
   ];
 
   return (
